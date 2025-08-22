@@ -1,6 +1,10 @@
 Simulador de Empréstimos - Angular 19
 Uma aplicação completa para simulação de empréstimos desenvolvida em Angular 19+ com API mock usando JSON Server.
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/bicalmeida/hackathon-2025-front-end)
+
+Descrição do projeto...
+
 📱 Funcionalidades
 Cadastro de Produtos: Criar novos produtos de empréstimo com taxa de juros e prazo máximo
 Listagem de Produtos: Visualizar todos os produtos cadastrados com informações detalhadas
