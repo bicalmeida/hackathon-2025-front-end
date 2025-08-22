@@ -1,0 +1,51 @@
+<div class="header">
+      <button class="back-button" (click)="goBack()">
+        ← Produtos Cadastrados
+      </button>
+      <button class="menu-button">☰</button>
+    </div>
+
+    <div class="products-container">
+      <div class="loading" *ngIf="isLoading">
+        Carregando produtos...
+      </div>
+
+      <div class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+
+      <div class="products-list" *ngIf="!isLoading && !errorMessage">
+        <div class="product-card" *ngFor="let produto of produtos; let i = index">
+          <div class="product-header">
+            <h3>{{ produto.nome }}</h3>
+            <div class="expand-controls">
+              <button 
+                class="expand-button"
+                (click)="toggleExpand(i)"
+              >
+                {{ expandedItems[i] ? 'Recolher' : 'Expandir' }}
+                <span class="arrow">{{ expandedItems[i] ? '▲' : '▼' }}</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-details" [class.expanded]="expandedItems[i]">
+            <div class="detail-row">
+              <span class="label">Juros Anual:</span>
+              <span class="value">{{ produto.taxaAnual }}%</span>
+            </div>
+            <div class="detail-row">
+              <span class="label">Prazo Máximo:</span>
+              <span class="value">{{ produto.prazoMaximo }} meses</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="empty-state" *ngIf="produtos.length === 0">
+          <p>Nenhum produto cadastrado ainda.</p>
+          <button class="add-product-button" (click)="goToCadastro()">
+            Cadastrar Primeiro Produto
+          </button>
+        </div>
+      </div>
+    </div>

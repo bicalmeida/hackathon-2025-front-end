@@ -1,0 +1,26 @@
+
+{  "produtos": [
+
+{
+      "id": 1,
+  "nome": "Empréstimo Pessoal",
+  "taxaAnual": 18.0,
+  "prazoMaximo": 24
+},
+
+{
+      "id": 2,
+  "nome": "Empréstimo Caixa",
+  "taxaAnual": 17.0,
+  "prazoMaximo": 36
+},
+
+{
+      "id": 3,
+  "nome": "Empréstimo Auto",
+  "taxaAnual": 13.0,
+  "prazoMaximo": 24
+} ],
+
+  "simulacoes": []
+}
